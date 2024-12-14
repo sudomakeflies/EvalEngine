@@ -1,0 +1,40 @@
+# Anexo 2: Evidencias de Desempeño Docente
+
+**Institución Educativa Técnica Comercial San Juan Bosco**  
+**San Luis, Tolima, Colombia**
+
+**Docente Evaluado**: Diego Estiben Beltrán Calderón  
+**Número de Identificación**: 80213550 de Bogotá
+
+## Tabla de Evidencias
+
+| No. | Folio | Date of Inclusion | Type of Evidence | Evidence Name | Supported Competencies | Signature | Description |
+|-----|-------|-------------------|------------------|---------------|-----------------------|-----------|-------------|
+| 1 | 01 | 06/06/2024 | D | Planificación Preliminar de Contenidos | Dominio Curricular | | Documento que detalla la planificación inicial de los talleres integrados de matemáticas y ciencias naturales dentro del proyecto "Melodías del Limón". Incluye objetivos específicos, secuencia de actividades y recursos necesarios. |
+| 2 | 02 | 06/06/2024 | D | Resultados Iniciales de Pruebas ICFES | Dominio Curricular | | Reporte con un análisis detallado de los resultados preliminares obtenidos por los estudiantes en las pruebas ICFES SABER 11, reflejando un punto de partida para la planificación académica. |
+| 3 | 03 | 06/06/2024 | D | Borrador de Adaptaciones Pedagógicas | Dominio Curricular | | Documento que contiene las adaptaciones pedagógicas propuestas para mejorar el aprendizaje, basadas en los resultados iniciales de las pruebas ICFES. |
+| 4 | 04 | 13/09/2024 | D | Informe Final de Adaptación | Dominio Curricular | | Informe que resume las adaptaciones pedagógicas implementadas con éxito, destacando mejoras en la comprensión y aplicación de conocimientos por parte de los estudiantes. |
+| 5 | 05 | 06/06/2024 | D | Registro de Estrategias Didácticas Preliminares | Pedagogía y Didáctica | | Documento que reúne las estrategias didácticas innovadoras propuestas para la participación activa de los estudiantes en el proyecto "Melodías del Limón". |
+| 6 | 06 | 06/06/2024 | D | Encuesta de Compromiso Estudiantil Inicial | Pedagogía y Didáctica | | Resultados de una encuesta aplicada a los estudiantes para medir su nivel de compromiso y motivación al inicio del proyecto. |
+| 7 | 07 | 06/06/2024 | D | Documentación de TICs Utilizadas | Pedagogía y Didáctica | | Recopilación de las tecnologías de la información y comunicación (TICs) utilizadas en el proceso enseñanza-aprendizaje del proyecto, buscando innovación y efectividad didáctica. |
+| 8 | 08 | 20/11/2024 | D | Informe Final de Eficacia Didáctica | Pedagogía y Didáctica | | Evaluación final sobre la eficacia de las estrategias didácticas implementadas, con base en la percepción de los estudiantes y los resultados obtenidos. |
+| 9 | 09 | 06/06/2024 | D | Plan Preliminar de Recursos | Uso de Recursos | | Documento preliminar que presenta la planificación de los recursos necesarios para ejecutar el proyecto "Melodías del Limón", buscando maximizar la eficiencia y reducir costos. |
+| 10 | 10 | 06/06/2024 | D | Registro Inicial de Gastos | Uso de Recursos | | Análisis financiero inicial del uso de materiales y costos asociados al proyecto, sirviendo de base para optimización futura. |
+| 11 | 11 | 06/06/2024 | D | Informe Preliminar de Mejoras | Uso de Recursos | | Informe que identifica oportunidades de mejora en la gestión de recursos, basado en los registros iniciales de gastos y consumo de materiales. |
+| 12 | 12 | 20/11/2024 | D | Registro Completo de Gastos | Uso de Recursos | | Documento detallado final sobre el consumo de recursos y costos realizados, reflejando una eficiencia mejorada en un 15% respecto al plan inicial. |
+| 13 | 13 | 06/06/2024 | D | Análisis de Comunicación Inicial | Comunicación Institucional | | Evaluación de los canales de comunicación disponibles al inicio del proyecto, con un enfoque en identificar posibles fallas y espacios de mejora. |
+| 14 | 14 | 06/06/2024 | D | Registro Inicial de Comunicaciones | Comunicación Institucional | | Compilación de las comunicaciones registradas al inicio del proyecto, analizando la eficacia de los mensajes y su recepción por las partes interesadas. |
+| 15 | 15 | 06/06/2024 | D | Borradores de Propuestas Comunicativas | Comunicación Institucional | | Propuestas iniciales para mejorar la infraestructura comunicativa del proyecto, incluyendo rutas alternativas y tecnologías sugeridas para optimización. |
+| 16 | 16 | 20/11/2024 | D | Implementación Final de Propuestas | Comunicación Institucional | | Informe sobre la implementación de nuevas estrategias comunicativas dentro del proyecto, mejorando la retroalimentación y colaboración entre los participantes. |
+| 17 | 17 | 06/06/2024 | D | Registros de Sesiones de Liderazgo Iniciales | Liderazgo | | Documentación de las primeras sesiones de liderazgo llevadas a cabo, destacando estrategias de motivación y desarrollo de habilidades del equipo de trabajo. |
+| 18 | 18 | 06/06/2024 | D | Evaluación Preliminar de Inclusión | Liderazgo | | Informe que evalúa el ambiente de inclusión dentro del equipo de trabajo, identificando áreas para promover la diversidad y participación equitativa. |
+| 19 | 19 | 20/11/2024 | D | Registro Completo de Liderazgo | Liderazgo | | Registro final que recopila el conjunto completo de sesiones de liderazgo implementadas, apuntando al fortalecimiento de la autonomía y capacidad del equipo. |
+| 20 | 20 | 06/06/2024 | D | Registro de Sesiones de Trabajo Iniciales | Trabajo en Equipo | | Actas de las primeras sesiones colaborativas interdisciplinarias, enfocadas en fomentar comunicación efectiva y apoyo mutuo dentro del proyecto. |
+| 21 | 21 | 06/06/2024 | D | Evidencia de Coordinación Inicial | Trabajo en Equipo | | Captura de acciones iniciales para promover un ambiente coordinado de trabajo, documentando el uso de metodologías ágiles y la integración de equipos. |
+| 22 | 22 | 20/11/2024 | D | Informe de Colaboración Final | Trabajo en Equipo | | Informe final sobre las dinámicas de colaboración del proyecto, presentando los logros alcanzados en términos de trabajo interdisciplinario y apoyo mutuo. |
+| 23 | 23 | 06/06/2024 | D | Documentación de Propuestas Iniciales | Iniciativa | | Recopilación de las primeras propuestas de innovaciones agroindustriales planteadas, enfocadas en la mejora de procesos y productos dentro del proyecto. |
+| 24 | 24 | 06/06/2024 | D | Informe de Viabilidad Inicial | Iniciativa | | Análisis de la viabilidad de las propuestas iniciales de innovación, evaluando su potencial impacto y viabilidad económica para implementación. |
+| 25 | 25 | 20/11/2024 | D | Registro Completo de Propuestas | Iniciativa | | Registro detallado de todas las propuestas de mejora continua implementadas, incluyendo sus resultados y efectos sobre los procesos y productos del proyecto. |
+
+**Conclusión**  
+El conjunto de evidencias presentadas respalda el desempeño sobresaliente registrado en la evaluación de Diego Estiben Beltrán Calderón, en sintonía con los objetivos del Proyecto Educativo Institucional (PEI) de la Institución Educativa Técnica Comercial San Juan Bosco. Estas evidencias reflejan su compromiso con la mejora continua de las prácticas educativas y la optimización de procesos internos, asegurando un impacto positivo en la comunidad educativa y un avance significativo en el proyecto "Melodías del Limón".

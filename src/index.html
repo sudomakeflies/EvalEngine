@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EvalEngine - Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .document-card {
+            height: 400px;
+            overflow-y: auto;
+        }
+        .preview-card {
+            height: 300px;
+            overflow-y: auto;
+        }
+        .guidelines-card {
+            height: 200px;
+        }
+        .custom-file-upload {
+            border: 2px dashed #ddd;
+            padding: 20px;
+            text-align: center;
+            cursor: pointer;
+            margin: 10px 0;
+            border-radius: 5px;
+        }
+        .custom-file-upload:hover {
+            border-color: #0d6efd;
+            background-color: #f8f9fa;
+        }
+        .document-list {
+            list-style: none;
+            padding: 0;
+        }
+        .document-list li {
+            padding: 8px;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .document-list li:hover {
+            background-color: #f8f9fa;
+        }
+        .processing-indicator {
+            display: none;
+            margin-top: 10px;
+        }
+        .processing-indicator.active {
+            display: block;
+        }
+    </style>
+</head>
+<body class="bg-light">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">EvalEngine Dashboard</a>
+        </div>
+    </nav>
+
+    <div class="container-fluid mt-4">
+        <div class="row">
+            <!-- Guidelines Input Section -->
+            <div class="col-md-6 mb-4">
+                <div class="card guidelines-card">
+                    <div class="card-header bg-white">
+                        <h5 class="card-title mb-0">Assessment Guidelines</h5>
+                    </div>
+                    <div class="card-body">
+                        <form id="guidelinesForm">
+                            <div class="mb-3">
+                                <textarea class="form-control" id="guidelines" rows="3" 
+                                    placeholder="Enter your processing guidelines here..."></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fas fa-play me-2"></i>Start Engine
+                            </button>
+                            <div class="processing-indicator">
+                                <div class="spinner-border text-primary" role="status">
+                                    <span class="visually-hidden">Processing...</span>
+                                </div>
+                                <span class="ms-2">Processing documents...</span>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Document Upload Section -->
+            <div class="col-md-6 mb-4">
+                <div class="card">
+                    <div class="card-header bg-white">
+                        <h5 class="card-title mb-0">Upload Documents</h5>
+                    </div>
+                    <div class="card-body">
+                        <label class="custom-file-upload w-100">
+                            <input type="file" id="fileUpload" style="display: none;" multiple>
+                            <i class="fas fa-cloud-upload-alt fa-2x mb-2"></i>
+                            <div>Drag and drop files here or click to upload</div>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Document List Section -->
+            <div class="col-md-6 mb-4">
+                <div class="card document-card">
+                    <div class="card-header bg-white">
+                        <h5 class="card-title mb-0">Available Documents</h5>
+                    </div>
+                    <div class="card-body">
+                        <ul class="document-list" id="documentList">
+                            <!-- Documents will be populated here dynamically -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Preview Section -->
+            <div class="col-md-6 mb-4">
+                <div class="card preview-card">
+                    <div class="card-header bg-white">
+                        <h5 class="card-title mb-0">Generated Drafts Preview</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="nav nav-tabs" id="previewTabs" role="tablist">
+                            <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#annex2" type="button">
+                                Annex 2
+                            </button>
+                            <button class="nav-link" data-bs-toggle="tab" data-bs-target="#annex5" type="button">
+                                Annex 5
+                            </button>
+                        </div>
+                        <div class="tab-content mt-3" id="previewContent">
+                            <div class="tab-pane fade show active" id="annex2">
+                                <pre id="annex2Content" class="bg-light p-3 rounded"></pre>
+                            </div>
+                            <div class="tab-pane fade" id="annex5">
+                                <pre id="annex5Content" class="bg-light p-3 rounded"></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Function to load documents
+        async function loadDocuments() {
+            try {
+                const response = await fetch('/api/documents');
+                const data = await response.json();
+                const documentList = document.getElementById('documentList');
+                documentList.innerHTML = '';
+                
+                if (data.documents && Array.isArray(data.documents)) {
+                    data.documents.forEach(doc => {
+                        const li = document.createElement('li');
+                        li.innerHTML = `
+                            <span><i class="fas fa-file me-2"></i>${doc}</span>
+                            <button class="btn btn-sm btn-danger" onclick="deleteDocument('${doc}')">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        `;
+                        documentList.appendChild(li);
+                    });
+                }
+            } catch (error) {
+                console.error('Error loading documents:', error);
+            }
+        }
+
+        // Function to delete document
+        async function deleteDocument(filename) {
+            if (confirm(`Are you sure you want to delete ${filename}?`)) {
+                try {
+                    const response = await fetch(`/api/documents/${filename}`, {
+                        method: 'DELETE'
+                    });
+                    if (response.ok) {
+                        loadDocuments();
+                    }
+                } catch (error) {
+                    console.error('Error deleting document:', error);
+                }
+            }
+        }
+
+        // Handle file upload
+        document.getElementById('fileUpload').addEventListener('change', async (event) => {
+            const files = event.target.files;
+            const formData = new FormData();
+            
+            for (let file of files) {
+                formData.append('files', file);
+            }
+
+            try {
+                const response = await fetch('/api/upload', {
+                    method: 'POST',
+                    body: formData
+                });
+                
+                if (response.ok) {
+                    loadDocuments();
+                }
+            } catch (error) {
+                console.error('Error uploading files:', error);
+            }
+        });
+
+        // Handle guidelines submission
+        document.getElementById('guidelinesForm').addEventListener('submit', async (event) => {
+            event.preventDefault();
+            const guidelines = document.getElementById('guidelines').value;
+            const processingIndicator = document.querySelector('.processing-indicator');
+            
+            try {
+                processingIndicator.classList.add('active');
+                const response = await fetch('/api/process', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ guidelines })
+                });
+
+                const result = await response.json();
+                
+                // Update preview sections
+                document.getElementById('annex2Content').textContent = result.annex2 || 'No content generated';
+                document.getElementById('annex5Content').textContent = result.annex5 || 'No content generated';
+            } catch (error) {
+                console.error('Error processing documents:', error);
+            } finally {
+                processingIndicator.classList.remove('active');
+            }
+        });
+
+        // Initial load of documents
+        loadDocuments();
+
+        // Add drag and drop support
+        const dropZone = document.querySelector('.custom-file-upload');
+        
+        dropZone.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            dropZone.style.backgroundColor = '#e9ecef';
+        });
+
+        dropZone.addEventListener('dragleave', (e) => {
+            e.preventDefault();
+            dropZone.style.backgroundColor = '';
+        });
+
+        dropZone.addEventListener('drop', async (e) => {
+            e.preventDefault();
+            dropZone.style.backgroundColor = '';
+            
+            const files = e.dataTransfer.files;
+            const formData = new FormData();
+            
+            for (let file of files) {
+                formData.append('files', file);
+            }
+
+            try {
+                const response = await fetch('/api/upload', {
+                    method: 'POST',
+                    body: formData
+                });
+                
+                if (response.ok) {
+                    loadDocuments();
+                }
+            } catch (error) {
+                console.error('Error uploading files:', error);
+            }
+        });
+    </script>
+</body>
+</html>

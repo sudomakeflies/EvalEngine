@@ -1,0 +1,7 @@
+Flask
+google-api-python-client
+google-auth-httplib2
+google-auth-oauthlib
+openai
+python-dotenv
+PyMuPDF # Para la extracción de texto desde PDFs

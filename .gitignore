@@ -1,0 +1,21 @@
+.venv
+# Ignorar archivos generados automáticamente por Python
+__pycache__/
+
+# Ignorar archivos de registro
+app.log
+
+# Ignorar archivos de configuración local
+.env
+
+# Ignorar archivos de sistema
+*.pyc
+*.pyo
+*.swp
+
+# Ignorar archivos temporales
+*.tmp
+*.log
+
+# Ignorar archivos de desarrollo
+.DS_Store
